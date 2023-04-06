@@ -23,10 +23,9 @@ function logOut(event) {
 if(localStorage.getItem("User") !== null){
   const userName = localStorage.getItem("User");
   loginForm.className= "hidden";
-  sayHello.innerText = `Hello ${userName}!`
+  paintName(localStorage.getItem("User"));
 }//LocalStorage에 저장되어 있으면 바로 인사를 출력
 
 
 loginForm.addEventListener("submit", logIn);
 logoutForm.addEventListener("submit", logOut);
-
